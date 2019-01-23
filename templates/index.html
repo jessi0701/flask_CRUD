@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+    {%for todo in todos %}
+        <div class="jumbotron">
+          <h1 class="display-4">{{todo.title}}</h1>
+          <hr class="my-4">
+          <a class="btn btn-primary btn-lg" href="/{{todo.id}}" role="button">{{todo.id}}</a>
+        </div>
+    {% endfor %}
+{% endblock %}

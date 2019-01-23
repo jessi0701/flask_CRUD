@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="jumbotron">
+  <h1 class="display-4">{{todo.title}}</h1>
+  <p class="lead">{{todo.content}}</p>
+  <hr class="my-4">
+  <p>{{todo.created_at}}</p>
+  <a class="btn btn-danger btn-lg" href="/{{todo.id}}/delete" role="button">삭제</a>
+  <a class="btn btn-primary btn-lg" href="/{{todo.id}}/edit" role="button">수정</a>
+</div>
+{% endblock %}
